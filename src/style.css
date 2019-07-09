@@ -247,16 +247,20 @@
   left:50%;
   width:400px;
   height:420px;
-  display: block;
-  animation: codeA 10s 1;
+  display: none;
+  animation: codeB 3s 1;
+  animation-play-state: paused;
+
   
 }
 
-@keyframe codeB{
+@keyframes codeB{
   0%{width:40px;height:42px;}
-  10%{top:90%;}
-  50%{top:40%;}
-  100%{width:400px;height:420px;top:50%;}
+  10%{top:90%;left:20%;}
+  40%{width:10px;height:12px;top:90%;left:70%;transform:rotate(0deg);}
+  60%{width:40px;height:42px;top:20%;left:-5%;transform:rotate(180deg);}
+  80%{width:200px;height:220px;top:70%;left:60%;transform:rotate(0deg);}
+  100%{width:400px;height:420px;top:50%;left:50%;}
 }
 
 

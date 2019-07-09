@@ -6,6 +6,7 @@ var ISSUELeft=0;
 
 
 
+
 $(".APP").click(
   function(){
     status=1;
@@ -82,7 +83,7 @@ $(".CODE").click(
     $(".MAGIC").addClass("MAGICclose");
     $(".CODEIntroduction").css("display", "block");
     
-    $(".CODEIntroduction").css("animation-name","codeB");
+    $(".CODEIntroduction").css("animation-play-state","running");
     
     $(".BACKclose").addClass("BACKopen");
     
