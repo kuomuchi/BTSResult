@@ -28,6 +28,12 @@ $(".APP").click(
         $(".APPcontrol").css("left","-1800px");
         APPLeft=4;
       }else if(APPLeft==4){
+        $(".APPcontrol").css("left","-2250px");
+        APPLeft=5;
+      }else if(APPLeft==5){
+        $(".APPcontrol").css("left","-2700px");
+        APPLeft=6;
+      }else if(APPLeft==6){
         $(".APPcontrol").css("left","0px");
         APPLeft=0;
       }
