@@ -1,6 +1,7 @@
 ///infinite
 
 var status=0;
+var magic=0;
 var APPLeft=0;
 var ISSUELeft=0;
 
@@ -101,6 +102,7 @@ $(".CODE").click(
 
 $(".MAGIC").click(
   function(){
+    
     status=4;
     $(".MAGIC").addClass("MAGICopen");
     
@@ -113,19 +115,94 @@ $(".MAGIC").click(
     $(".BACKopen").css('background-color', '#AA0000');
     
     $(".MOT").css('display', 'block');
+    $(".MOT2").css('display', 'block');
+    $(".MOT3").css('display', 'block');
+    $(".MOT4").css('display', 'block');
+    $(".MOT5").css('display', 'block');
+    $(".MOT6").css('display', 'block');
+    
+    
+    
+    $(".MAGICBack").click(
+      function(){
+        $(".MOT").removeClass('MOTop');
+        $(".MAGICVID").removeClass('MAGICVIDop');
+        $(".MOT2").removeClass('MOTop');
+        $(".MOT3").removeClass('MOTop');
+        $(".MOT4").removeClass('MOTop');
+        $(".MOT5").removeClass('MOTop');
+        $(".MOT6").removeClass('MOTop');
+      }
+    );
+
+ 
+    
     $(".MOT").click(
       function(){
         if(status == 4){
+          console.log(magic);
+          magic=1;
+          console.log(magic);
           $(".MOT").addClass('MOTop');
           $(".MAGICVID").addClass('MAGICVIDop');
         }
-        
       }
-    )
+    );
+      
+    $(".MOT2").click(
+      function(){
+        if(status == 4){
+          $(".MOT2").addClass('MOTop');
+          
+        }
+      }
+    );
+    $(".MOT3").click(
+      function(){
+        if(status == 4){
+          $(".MOT3").addClass('MOTop');
+          
+        }
+      }
+    );
+    
+    $(".MOT4").click(
+      function(){
+        if(status == 4){
+          $(".MOT4").addClass('MOTop');
+          
+        }
+      }
+    );
+    
+    $(".MOT5").click(
+      function(){
+        if(status == 4){
+          $(".MOT5").addClass('MOTop');
+          
+        }
+      }
+    );
+    
+    
+    $(".MOT6").click(
+      function(){
+        if(status == 4){
+          $(".MOT6").addClass('MOTop');
+          
+        }
+      }
+    );
+      
+    
     
 }
 );
   
+    
+    
+    
+    
 $(".BACKclose").click(
   function(){
     
@@ -141,32 +218,48 @@ $(".BACKclose").click(
       $(".APPcontrol").css('display', 'none');
       
     }else if(status == 2){
-    $(".ISSUE").removeClass("ISSUEopen");
-    
-    $(".APP").removeClass("APPclose");
-    $(".CODE").removeClass("CODEclose");
-    $(".MAGIC").removeClass("MAGICclose");
-      
-    $(".ISSUEtrol").css("display","none");
+      $(".ISSUE").removeClass("ISSUEopen");
+
+      $(".APP").removeClass("APPclose");
+      $(".CODE").removeClass("CODEclose");
+      $(".MAGIC").removeClass("MAGICclose");
+
+      $(".ISSUEtrol").css("display","none");
       
     }else if(status == 3){
-    $(".CODE").removeClass("CODEopen");
-    
-    $(".APP").removeClass("APPclose");
-    $(".ISSUE").removeClass("ISSUEclose");
-    $(".MAGIC").removeClass("MAGICclose");
-      
-    $(".CODEIntroduction").css("display", "none");
+      $(".CODE").removeClass("CODEopen");
+
+      $(".APP").removeClass("APPclose");
+      $(".ISSUE").removeClass("ISSUEclose");
+      $(".MAGIC").removeClass("MAGICclose");
+
+      $(".CODEIntroduction").css("display", "none");
       
     }else if(status == 4){
-    $(".MAGIC").removeClass("MAGICopen");
-    
-    $(".APP").removeClass("APPclose");
-    $(".CODE").removeClass("CODEclose");
-    $(".ISSUE").removeClass("ISSUEclose");
-    $(".MOT").css('display', 'none');
-    $(".MAGICVID").removeClass('MAGICVIDop');
-    $(".MOT").removeClass('MOTop');
+      $(".MAGIC").removeClass("MAGICopen");
+
+      $(".APP").removeClass("APPclose");
+      $(".CODE").removeClass("CODEclose");
+      $(".ISSUE").removeClass("ISSUEclose");
+
+      //笨笨的做法
+      $(".MOT").css('display', 'none');
+      $(".MOT2").css('display', 'none');
+      $(".MOT3").css('display', 'none');
+      $(".MOT4").css('display', 'none');
+      $(".MOT5").css('display', 'none');
+      $(".MOT6").css('display', 'none');
+
+
+      $(".MAGICVID").removeClass('MAGICVIDop');
+
+      //笨笨的做法
+      $(".MOT").removeClass('MOTop');
+      $(".MOT2").removeClass('MOTop');
+      $(".MOT3").removeClass('MOTop');
+      $(".MOT4").removeClass('MOTop');
+      $(".MOT5").removeClass('MOTop');
+      $(".MOT6").removeClass('MOTop');
       
     }
 }
