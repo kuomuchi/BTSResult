@@ -4,8 +4,16 @@
   transition-duration: 1s;
 }
 
-.IMG1{
+html{
+  transition-duration: 0.1s;
+}
 
+.BAC{
+  transition-duration: 0.1s;
+}
+
+.look, .look2{
+  font-size: 20px;
 }
   
 .opBody{
@@ -212,12 +220,9 @@ a{
   animation: ISSUEIN 12.5s 1;
 }
 
-.ImmigrationText{
+.ImmigrationText,.PoliticsText,.PoliticsText2,.PoliticsText3{
   font-size: 20px;
-}
-
-.PoliticsText{
-  font-size: 20px;
+  margin-top: 15px;
 }
 
 @keyframes ISSUEIN{
@@ -228,7 +233,9 @@ a{
 
 
 
-.Immigration,.Politics{
+.Immigration,.Politics,.Politics2,.Politics3{
+  
+  font-size:40px;
   display:inline-block;
   width:450px;
   height:430px;
@@ -242,7 +249,7 @@ a{
   top:50%;
   left:0;
   background-color: blue;
-  width:900px;
+  width:1800px;
   height:430px;
   display: none;
 }
@@ -277,9 +284,71 @@ a{
   display: none;
   animation: codeB 3s 1;
   animation-play-state: paused;
-
-  
 }
+
+
+.CODESwitch{
+  position: absolute;
+  transform: translate(-35px, -50px);
+  top:50%;
+  left:50%;
+  background-color:green;
+  top:50%;
+  left:50%;
+  width:70px;
+  height:100px;
+  display: none;
+}
+
+.CODESwitchText{
+  width: 100px;
+  font-size: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: -40px;
+  left: 50%;
+}
+
+.controlOFF{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top:30%;
+  left:50%;
+  background-color:black;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+.controlON{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top:70%;
+  left:50%;
+  background-color:black;
+  width: 40px;
+  height: 40px;
+}
+
+.CODEURL{
+  z-index:5;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 200%;
+  left: 50%;
+  display: none;
+}
+
+.CODEURLadd{
+  z-index:5;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 93%;
+  left: 50%;
+  display: block;
+}
+
 
 @keyframes codeB{
   0%{width:40px;height:42px;}
@@ -457,6 +526,8 @@ a{
 
 }
 
+
+
 .MAGICclose{
   
   background-color:#FF0000;
@@ -544,6 +615,7 @@ a{
   margin-top: 20px;
   background-color: #800000;
   display: none;
+  transition-duration: 0s;
 }
 
 
@@ -557,6 +629,7 @@ a{
   font-size:20px;
   background-color:#800000;
   display: none;
+  transition-duration: 0s;
 }
 
 .MAGICBack{
@@ -566,6 +639,25 @@ a{
   font-size: 20px;
   background-color: #AA0000;
   color: white;
+  opacity: 0;
+  
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 60px;
+  left: 450px;
+  width: 60px;
+  height: 33px;
+  transform:rotate(180deg);
+}
+
+.MAGICOpen{
+  z-index: 8;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #AA0000;
+  color: white;
+  opacity: 1;
   
   position: absolute;
   transform: translate(-50%,-50%);

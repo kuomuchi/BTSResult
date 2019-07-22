@@ -1,10 +1,34 @@
 ///infinite
 
 var status=0;
+var CODE=0;
 var magic=0;
 var APPLeft=0;
 var ISSUELeft=0;
 
+var ref = "";
+
+///0=off 1=on
+var Switch=0;
+
+function get_random_color() 
+{
+ var color ="";
+ for(var i = 0; i <3; i++) {
+ var sub = Math.floor(Math.random() * 256).toString(16);
+ color += (sub.length == 1?"0" + sub : sub);
+ }
+ return"#" + color;
+}
+
+function get_rand_color()
+{
+ var color = Math.floor(Math.random() * Math.pow(256, 3)).toString(16);
+ while(color.length <6) {
+ color ="0" + color;
+ }
+ return"#" + color;
+}
 
 
 
@@ -56,31 +80,46 @@ $(".APP").click(
 
 $(".ISSUE").click(
   function(){
+    ISSUELeft=0;
     status=2;
     $(".ISSUE").addClass("ISSUEopen");
     
     $(".APP").addClass("APPclose");
     $(".CODE").addClass("CODEclose");
     $(".MAGIC").addClass("MAGICclose");
-    $(".ISSUEtrol").click(function(){
-      if(ISSUELeft==0){
-        $(".ISSUEtrol").css("left","-450px");
-        ISSUELeft=1;
-      }else if(ISSUELeft==1){
-        $(".ISSUEtrol").css("left","0px");
-        ISSUELeft=0;
-      }
-    });
     
     $(".ISSUEtrol").css("display","block");
     
     $(".BACKclose").addClass("BACKopen");
     
     $(".BACKopen").css('background-color', '#FF0000');
+    
+    
+    $(".ISSUEtrol").click(function(){
+      if(ISSUELeft==0){
+        $(".ISSUEtrol").css("left","-450px");
+        ISSUELeft=1;
+
+      }else if(ISSUELeft==1){
+        $(".ISSUEtrol").css("left","-900px");
+        ISSUELeft=2;
+
+      }else if(ISSUELeft==2){
+        $(".ISSUEtrol").css("left","-1350px");
+         ISSUELeft=3;
+        
+      }else if(ISSUELeft==3){
+        $(".ISSUEtrol").css("left","0px");
+        ISSUELeft=0;
+      }
+    });
+    
+    
 }
 );
 
 $(".CODE").click(
+  
   function(){
     status=3;
     $(".CODE").addClass("CODEopen");
@@ -88,7 +127,14 @@ $(".CODE").click(
     $(".APP").addClass("APPclose");
     $(".ISSUE").addClass("ISSUEclose");
     $(".MAGIC").addClass("MAGICclose");
+    $(".CODEURL").addClass("CODEURLadd");
+    
+    
     $(".CODEIntroduction").css("display", "block");
+    $(".CODEURL").css("display","block");
+    
+    
+    
     
     $(".CODEIntroduction").css("animation-play-state","running");
     
@@ -96,9 +142,40 @@ $(".CODE").click(
     
     $(".BACKopen").css('background-color', '#CC0000');
     
+    setTimeout(function(){
+      $(".CODESwitch").css("display", "block");
+    }, 3000);
+    
+    
+  $(".controlOFF").click(
+    function(){
+      if(CODE==0){
+        $(".controlOFF").addClass("controlON");
+        $(".controlOFF").text("ON");
+        CODE=1;
+        ref = setInterval(function(){
+          $(".BAC , html").css("background-color",get_rand_color());
+        },100);
+        
+        
+        
+      }else{
+        $(".controlOFF").removeClass("controlON");
+        $(".controlOFF").text("OFF");
+        CODE=0;
+        $(".BAC , html").css("background-color","white");
+        clearInterval(ref);
+      }
+      
+    }
+  );
+    
     
 }
 );
+
+
+
 
 $(".MAGIC").click(
   function(){
@@ -111,6 +188,7 @@ $(".MAGIC").click(
     $(".ISSUE").addClass("ISSUEclose");
     
     $(".BACKclose").addClass("BACKopen");
+    $(".MAGICBack").addClass("MAGICOpen");
     
     $(".BACKopen").css('background-color', '#AA0000');
     
@@ -206,6 +284,7 @@ $(".MAGIC").click(
 $(".BACKclose").click(
   function(){
     
+    $(".MAGICBack").removeClass("MAGICOpen");
     $(".BACKclose").removeClass("BACKopen");
     status == 0;
     
@@ -223,6 +302,7 @@ $(".BACKclose").click(
       $(".APP").removeClass("APPclose");
       $(".CODE").removeClass("CODEclose");
       $(".MAGIC").removeClass("MAGICclose");
+      $(".CODEURL").removeClass("CODEURLadd");
 
       $(".ISSUEtrol").css("display","none");
       
@@ -234,6 +314,8 @@ $(".BACKclose").click(
       $(".MAGIC").removeClass("MAGICclose");
 
       $(".CODEIntroduction").css("display", "none");
+      $(".CODESwitch").css("display", "none");
+      $(".CODEURL").css("display","none");
       
     }else if(status == 4){
       $(".MAGIC").removeClass("MAGICopen");
