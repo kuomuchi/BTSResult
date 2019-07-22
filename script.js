@@ -6,6 +6,8 @@ var magic=0;
 var APPLeft=0;
 var ISSUELeft=0;
 
+var audio = $("#audio")[0];  
+
 var ref = "";
 
 ///0=off 1=on
@@ -157,7 +159,8 @@ $(".CODE").click(
           $(".BAC , html").css("background-color",get_rand_color());
         },100);
         
-        
+        audio.play();  
+
         
       }else{
         $(".controlOFF").removeClass("controlON");
@@ -165,6 +168,8 @@ $(".CODE").click(
         CODE=0;
         $(".BAC , html").css("background-color","white");
         clearInterval(ref);
+        audio.pause();  
+
       }
       
     }
