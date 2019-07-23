@@ -226,6 +226,11 @@ $(".MAGIC").click(
       function(){
         $(".MOT").removeClass('MOTop');
         $(".MAGICVID").removeClass('MAGICVIDop');
+        $(".MAGICVID2").removeClass('MAGICVIDop');
+        $(".MAGICVID3").removeClass('MAGICVIDop');
+        $(".MAGICVID4").removeClass('MAGICVIDop');
+        $(".MAGICVID5").removeClass('MAGICVIDop');
+        $(".MAGICVID6").removeClass('MAGICVIDop');
         $(".MOT2").removeClass('MOTop');
         $(".MOT3").removeClass('MOTop');
         $(".MOT4").removeClass('MOTop');
@@ -252,6 +257,7 @@ $(".MAGIC").click(
       function(){
         if(status == 4){
           $(".MOT2").addClass('MOTop');
+          $(".MAGICVID2").addClass('MAGICVIDop');
 
         }
       }
@@ -260,7 +266,7 @@ $(".MAGIC").click(
       function(){
         if(status == 4){
           $(".MOT3").addClass('MOTop');
-
+          $(".MAGICVID3").addClass('MAGICVIDop');
         }
       }
     );
@@ -269,6 +275,7 @@ $(".MAGIC").click(
       function(){
         if(status == 4){
           $(".MOT4").addClass('MOTop');
+          $(".MAGICVID4").addClass('MAGICVIDop');
 
         }
       }
@@ -278,6 +285,7 @@ $(".MAGIC").click(
       function(){
         if(status == 4){
           $(".MOT5").addClass('MOTop');
+          $(".MAGICVID5").addClass('MAGICVIDop');
 
         }
       }
@@ -288,6 +296,7 @@ $(".MAGIC").click(
       function(){
         if(status == 4){
           $(".MOT6").addClass('MOTop');
+          $(".MAGICVID6").addClass('MAGICVIDop');
 
         }
       }
@@ -355,6 +364,12 @@ $(".BACKclose").click(
 
 
       $(".MAGICVID").removeClass('MAGICVIDop');
+      $(".MAGICVID2").removeClass('MAGICVIDop');
+      $(".MAGICVID3").removeClass('MAGICVIDop');
+      $(".MAGICVID4").removeClass('MAGICVIDop');
+      $(".MAGICVID5").removeClass('MAGICVIDop');
+      $(".MAGICVID6").removeClass('MAGICVIDop');
+
 
       //笨笨的做法
       $(".MOT").removeClass('MOTop');
