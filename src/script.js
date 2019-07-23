@@ -1,6 +1,6 @@
 ///infinite
 
-document.getElementById(audio).controls.stop();
+
 
 var status=0;
 var CODE=0;
@@ -161,7 +161,7 @@ $(".CODE").click(
           $(".BAC , html").css("background-color",get_rand_color());
         },100);
         
-        document.getElementById(audio).controls.play();
+        document.getElementById("audio").controls.play();
 
         
       }else{
@@ -170,7 +170,7 @@ $(".CODE").click(
         CODE=0;
         $(".BAC , html").css("background-color","white");
         clearInterval(ref);
-        document.getElementById(audio).controls.stop();
+        document.getElementById("audio").controls.stop();
 
       }
       
