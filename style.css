@@ -600,7 +600,7 @@ a{
 
 
 .MAGICVID, .MAGICVID2, .MAGICVID3, .MAGICVID4, .MAGICVID5, .MAGICVID6{
-  display: block;
+  display: none;
   position: absolute;
   top:1000%;
   left:50%;
